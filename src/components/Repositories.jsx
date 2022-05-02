@@ -35,6 +35,7 @@ export const Repositories = ({
           {paginatedList.map((repo) => {
             return (
               <Repo
+                 key={repo.name}
                 url={repo.html_url}
                 name={repo.name}
                 description={repo.description}
