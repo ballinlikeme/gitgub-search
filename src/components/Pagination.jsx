@@ -55,7 +55,7 @@ export const Pagination = ({
                       paginate(number);
                     }}
                     key={number}
-                    className={currentPage === number && "_active"}
+                    className={currentPage === number ? "_active" : undefined}
                   >
                     {number}
                   </li>
