@@ -12,7 +12,7 @@ export const Repositories = ({
       <section className="page__repositories repositories-not-found">
         <div className="repositories-not-found__container">
           <div className="repositories-not-found__image">
-            <img src={repoIcon} alt="" />
+            <img src={repoIcon} alt="Repo Icon" />
           </div>
           <p className="repositories-not-found__text">
             Repository list is empty
