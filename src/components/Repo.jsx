@@ -5,7 +5,7 @@ export const Repo = ({ url, description, name }) => {
     <li className="repositories__element element-repositories">
       <h3 className="element-repositories__title">
         <a rel="noreferrer" target="_blank" href={url}>
-          {name}
+          {name || "No name"}
         </a>
       </h3>
       <p className="element-repositories__text">

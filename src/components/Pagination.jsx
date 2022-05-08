@@ -7,8 +7,8 @@ export const Pagination = ({
   paginate,
 }) => {
   if (userRepositories) {
-    const startIndex = (currentPage - 1) * repositoriesPerPage; //
-    const endIndex = currentPage * repositoriesPerPage; //
+    const startIndex = (currentPage - 1) * repositoriesPerPage;
+    const endIndex = currentPage * repositoriesPerPage;
     const paginatedList = userRepositories.slice(startIndex, endIndex);
 
     const firstRepo = userRepositories.indexOf(paginatedList[0]) + 1;
