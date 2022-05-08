@@ -22,3 +22,5 @@ export const normalizeNumber = (number) => {
     return numberArr[0] + "." + numberArr[1] + "M";
   }
 };
+
+const normalizeMessage = (message) => {};

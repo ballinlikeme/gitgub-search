@@ -105,6 +105,8 @@ a {
   overflow: hidden;
   background: #F9F9F9;
 
+  display: flex;
+  flex-direction: column;
 
 }
 
@@ -146,6 +148,7 @@ a {
 
 .page {
   padding: 28px 0;
+  flex: 1 1 auto;
 }
 
 .page__container {
