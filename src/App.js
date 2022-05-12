@@ -1,12 +1,13 @@
 import "./css/style.css";
-import searchIcon from "./img/start-state/search-icon.svg";
-import userIcon from "./img/empty-state/user-not-found-icon.svg";
 import { Search } from "./components/Search";
 import { useState } from "react";
 import { getUserData, getUserRepositories } from "./js/api";
 import { Profile } from "./components/Profile";
 import { Repositories } from "./components/Repositories";
 import { Pagination } from "./components/Pagination";
+import { UserNotFound } from "./components/UserNotFound";
+import { StartState } from "./components/StartState";
+import { Loader } from "./components/Loader";
 
 function App() {
   const [userData, setUserData] = useState(null);
@@ -35,18 +36,7 @@ function App() {
     return (
       <div className="wrapper">
         <Search saveUserName={getUser} />
-        <div className="start-state">
-          <div className="start-state__container">
-            <div className="start-state__image">
-              <img src={searchIcon} alt="Search Icon" />
-            </div>
-            <p className="start-state__text">
-              Start with searching
-              <br />
-              <br /> a GitHub user
-            </p>
-          </div>
-        </div>
+        <StartState />
       </div>
     );
   }
@@ -55,14 +45,7 @@ function App() {
     return (
       <div className="wrapper">
         <Search saveUserName={getUser} />
-        <div className="start-state">
-          <div className="start-state__container">
-            <div className="start-state__image">
-              <img src={userIcon} alt="Search Icon" />
-            </div>
-            <p className="start-state__text">User not found</p>
-          </div>
-        </div>
+        <UserNotFound />
       </div>
     );
   }
@@ -71,7 +54,7 @@ function App() {
     return (
       <div className="wrapper">
         <Search saveUserName={getUser} />
-        <div className="loader"></div>
+        <Loader />
       </div>
     );
   }
